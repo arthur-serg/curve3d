@@ -2,12 +2,12 @@
 //
 
 #include "Curves3D.hpp"
-
 #include <cmath>
 #include "Circle.hpp"
 #include "Curve.hpp"
 #include "Ellipse.hpp"
 #include "Helix.hpp"
+#include "VectorGenerator.hpp"
 double pi = std::acos(-1);
 int main() {
   double t = pi / 4.0;
@@ -28,5 +28,6 @@ int main() {
 
   helix.getDerivative(t).print();
   helix.getDerivative(t + 2 * pi).print();
+
   return 0;
 }

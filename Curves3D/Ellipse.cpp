@@ -5,17 +5,17 @@ namespace curve {
 Ellipse::Ellipse(const double& a, const double& b) : a(a), b(b) {
   std::cout << "Ellipse::Ellipse(a,b)" << std::endl;
 }
-std::string Ellipse::getName() const {
+std::string Ellipse::getName() const noexcept {
   std::cout << "Ellipse" << std::endl;
   return "Ellipse";
 }
-Point Ellipse::getValue(const double& t) const {
+Point Ellipse::getValue(const double& t) const noexcept {
   return Point(a * cos(t), b * sin(t), 0);
 }
-Point Ellipse::getDerivative(const double& t) const {
+Point Ellipse::getDerivative(const double& t) const noexcept {
   return Point(-a * sin(t), b * cos(t), 0);
 }
-Ellipse::~Ellipse() {
+Ellipse::~Ellipse() noexcept {
   std::cout << "~Ellipse()" << std::endl;
 }
 }  // namespace curve

@@ -4,11 +4,11 @@
 namespace curve {
 class Circle : public Curve {
  public:
-  Circle(const double& radius);
-  std::string getName() const override;
-  Point getValue(const double& t) const override;
-  Point getDerivative(const double& t) const override;
-  virtual ~Circle();
+  explicit Circle(const double& radius);
+  std::string getName() const noexcept override;
+  Point getValue(const double& t) const noexcept override;
+  Point getDerivative(const double& t) const noexcept override;
+  virtual ~Circle() noexcept;
 
  private:
   double radius;

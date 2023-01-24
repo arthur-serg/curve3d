@@ -7,20 +7,20 @@ Helix::Helix(const double& radius, const double& step)
   std::cout << "Helix::Helix(a,b)" << std::endl;
 }
 
-std::string Helix::getName() const {
+std::string Helix::getName() const noexcept {
   std::cout << "Helix" << std::endl;
   return "Helix";
 }
 
-Point Helix::getValue(const double& t) const {
+Point Helix::getValue(const double& t) const noexcept {
   return Point(radius * cos(t), radius * sin(t), step * t);
 }
 
-Point Helix::getDerivative(const double& t) const {
+Point Helix::getDerivative(const double& t) const noexcept {
   return Point(-radius * sin(t), radius * cos(t), step);
 }
 
-Helix::~Helix() {
+Helix::~Helix() noexcept {
   std::cout << "~Helix()" << std::endl;
 }
 

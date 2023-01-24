@@ -3,11 +3,11 @@
 namespace curve {
 class Helix : public Curve {
  public:
-  Helix(const double& radius, const double& step);
-  std::string getName() const override;
-  Point getValue(const double& t) const override;
-  Point getDerivative(const double& t) const override;
-  virtual ~Helix();
+  explicit Helix(const double& radius, const double& step);
+  std::string getName() const noexcept override;
+  Point getValue(const double& t) const noexcept override;
+  Point getDerivative(const double& t) const noexcept override;
+  virtual ~Helix() noexcept;
 
  private:
   double radius;

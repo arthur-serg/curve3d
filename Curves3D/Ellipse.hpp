@@ -5,11 +5,11 @@ namespace curve {
 
 class Ellipse : public Curve {
  public:
-  Ellipse(const double& a, const double& b);
-  std::string getName() const override;
-  Point getValue(const double& t) const override;
-  Point getDerivative(const double& t) const override;
-  virtual ~Ellipse();
+  explicit Ellipse(const double& a, const double& b);
+  std::string getName() const noexcept override;
+  Point getValue(const double& t) const noexcept  override;
+  Point getDerivative(const double& t) const noexcept override;
+  virtual ~Ellipse() noexcept;
 
  private:
   double a;
