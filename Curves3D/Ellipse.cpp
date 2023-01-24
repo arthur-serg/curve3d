@@ -1,9 +1,9 @@
 #include "Ellipse.hpp"
 
 namespace curve {
-Ellipse::Ellipse(const double& a, const double& b, const double& t)
-    : a(a), b(b), t(t) {
-  std::cout << "Ellipse::Ellipse(a,b,t)" << std::endl;
+
+Ellipse::Ellipse(const double& a, const double& b) : a(a), b(b) {
+  std::cout << "Ellipse::Ellipse(a,b)" << std::endl;
 }
 std::string Ellipse::getName() const {
   std::cout << "Ellipse" << std::endl;

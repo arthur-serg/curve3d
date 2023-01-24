@@ -14,17 +14,19 @@ int main() {
   double circleRadius = 1;
   double a = 2.0;
   double b = 4.0;
-  auto circle = curve::Circle(circleRadius, t);
+  auto circle = curve::Circle(circleRadius);
   circle.getValue(t).print();
   circle.getDerivative(t).print();
 
-  auto ellipse = curve::Ellipse(a, b, t);
+  auto ellipse = curve::Ellipse(a, b);
   ellipse.getValue(t).print();
   ellipse.getDerivative(t).print();
 
-  auto helix = curve::Helix(a, b, t);
-  auto helixTwo = curve::Helix(a, b, 2 * t);
+  auto helix = curve::Helix(a, b);
   helix.getValue(t).print();
+  helix.getValue(t + 2 * pi).print();
+
   helix.getDerivative(t).print();
+  helix.getDerivative(t + 2 * pi).print();
   return 0;
 }

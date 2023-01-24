@@ -1,9 +1,9 @@
 #include "Circle.hpp"
 
 namespace curve {
-Circle::Circle(const double& radius, const double& t)
-    : radius(radius), t(t), origin(radius * cos(t), radius * sin(t), 0) {
-  std::cout << "Circle::Circle(a,b,t) " << std::endl;
+
+Circle::Circle(const double& radius) : radius(radius) {
+  std::cout << "Circle::Circle(radius)" << std::endl;
 }
 
 std::string Circle::getName() const {
