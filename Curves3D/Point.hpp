@@ -6,6 +6,9 @@ class Point {
   Point() = default;
   ~Point() = default;
   void print() const;
+  double getX() const { return x; }
+  double getY() const { return y; }
+  double getZ() const { return z; }
 
  private:
   double x;
