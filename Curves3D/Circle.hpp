@@ -5,8 +5,10 @@ namespace curve {
 class Circle : public Curve {
  public:
   Circle(const double& radius, const double& t);
+  std::string getName() const override;
   Point getValue(const double& t) const override;
   Point getDerivative(const double& t) const override;
+  virtual ~Circle();
 
  private:
   Point origin;
