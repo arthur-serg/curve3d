@@ -5,6 +5,9 @@ namespace curve {
 class Circle : public Curve {
  public:
   explicit Circle(const double& radius);
+  Circle(const Circle&) = delete;
+  Circle& operator=(const Circle&) = delete;
+
   std::string getName() const noexcept override;
   Point getValue(const double& t) const noexcept override;
   Point getDerivative(const double& t) const noexcept override;
