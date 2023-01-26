@@ -7,6 +7,12 @@ Helix::Helix(const double& radius, const double& step)
   std::cout << "Helix::Helix(a,b)" << std::endl;
 }
 
+Helix::Helix() {
+  RandomDouble randomizer(10);
+  radius =  randomizer.getValue();
+  step = 1;
+}
+
 std::string Helix::getName() const noexcept {
   std::cout << "Helix" << std::endl;
   return "Helix";

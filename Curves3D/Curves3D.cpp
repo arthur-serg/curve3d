@@ -28,6 +28,11 @@ int main() {
 
   helix.getDerivative(t).print();
   helix.getDerivative(t + 2 * pi).print();
+  curve::VectorGenerator vec(20);
 
+
+
+  auto helixGen = curve::Helix();
+  helixGen.getValue(t).print();
   return 0;
 }
