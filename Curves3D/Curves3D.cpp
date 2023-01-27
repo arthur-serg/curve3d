@@ -29,10 +29,18 @@ int main() {
   helix.getDerivative(t).print();
   helix.getDerivative(t + 2 * pi).print();
   curve::VectorGenerator vec(20);
+  std::cout << "random generated curves: " << std::endl;
 
+  auto randomCircle = curve::Circle();
+  randomCircle.getValue(t).print();
+  randomCircle.getDerivative(t).print();
 
+  auto randomEllipse = curve::Ellipse();
+  randomEllipse.getValue(t).print();
+  randomEllipse.getDerivative(t).print();
 
-  auto helixGen = curve::Helix();
-  helixGen.getValue(t).print();
+  auto randomHelix = curve::Helix();
+  randomHelix.getValue(t).print();
+  randomHelix.getDerivative(t).print();
   return 0;
 }
