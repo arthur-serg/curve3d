@@ -1,6 +1,5 @@
 #pragma once
 #include "Curve.hpp"
-#include "Randomizer.hpp"
 namespace curve {
 class Helix : public Curve {
  public:

@@ -5,6 +5,10 @@ namespace curve {
 Ellipse::Ellipse(const double& a, const double& b) : a(a), b(b) {
   std::cout << "Ellipse::Ellipse(a,b)" << std::endl;
 }
+Ellipse::Ellipse() {
+  a = RandomDouble(20).getValue();
+  b = RandomDouble(20).getValue();
+}
 std::string Ellipse::getName() const noexcept {
   std::cout << "Ellipse" << std::endl;
   return "Ellipse";

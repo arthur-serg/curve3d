@@ -6,6 +6,7 @@ namespace curve {
 class Ellipse : public Curve {
  public:
   explicit Ellipse(const double& a, const double& b);
+  Ellipse();
   Ellipse(const Ellipse&) = delete;
   Ellipse& operator=(const Ellipse&) = delete;
 

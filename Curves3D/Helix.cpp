@@ -8,9 +8,8 @@ Helix::Helix(const double& radius, const double& step)
 }
 
 Helix::Helix() {
-  RandomDouble randomizer(10);
-  radius =  randomizer.getValue();
-  step = 1;
+  radius = RandomDouble(10).getValue();
+  step = RandomDouble(10).getValue();
 }
 
 std::string Helix::getName() const noexcept {

@@ -5,6 +5,7 @@ namespace curve {
 class Circle : public Curve {
  public:
   explicit Circle(const double& radius);
+  Circle();
   Circle(const Circle&) = delete;
   Circle& operator=(const Circle&) = delete;
 

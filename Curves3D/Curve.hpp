@@ -1,6 +1,7 @@
 #pragma once
 #include <iostream>
 #include "Point.hpp"
+#include "Randomizer.hpp"
 namespace curve {
 
 class Curve {

@@ -6,6 +6,10 @@ Circle::Circle(const double& radius) : radius(radius) {
   std::cout << "Circle::Circle(radius)" << std::endl;
 }
 
+Circle::Circle() {
+  radius = RandomDouble(10).getValue();
+}
+
 std::string Circle::getName() const noexcept {
   std::cout << "Circle" << std::endl;
   return "Circle";
