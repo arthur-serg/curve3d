@@ -11,7 +11,6 @@ Circle::Circle() {
 }
 
 std::string Circle::getName() const noexcept {
-  std::cout << "Circle" << std::endl;
   return "Circle";
 }
 
@@ -24,7 +23,7 @@ Point Circle::getDerivative(const double& t) const noexcept {
 }
 
 Circle::~Circle() noexcept {
-  std::cout << "~Circle()" << std::endl;
+  /*std::cout << "~Circle()" << std::endl;*/
 }
 
 }  // namespace curve

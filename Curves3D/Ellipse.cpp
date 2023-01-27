@@ -10,7 +10,6 @@ Ellipse::Ellipse() {
   b = RandomDouble(20).getValue();
 }
 std::string Ellipse::getName() const noexcept {
-  std::cout << "Ellipse" << std::endl;
   return "Ellipse";
 }
 Point Ellipse::getValue(const double& t) const noexcept {
@@ -20,6 +19,6 @@ Point Ellipse::getDerivative(const double& t) const noexcept {
   return Point(-a * sin(t), b * cos(t), 0);
 }
 Ellipse::~Ellipse() noexcept {
-  std::cout << "~Ellipse()" << std::endl;
+  /*std::cout << "~Ellipse()" << std::endl;*/
 }
 }  // namespace curve

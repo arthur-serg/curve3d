@@ -13,7 +13,6 @@ Helix::Helix() {
 }
 
 std::string Helix::getName() const noexcept {
-  std::cout << "Helix" << std::endl;
   return "Helix";
 }
 
@@ -26,7 +25,7 @@ Point Helix::getDerivative(const double& t) const noexcept {
 }
 
 Helix::~Helix() noexcept {
-  std::cout << "~Helix()" << std::endl;
+  /*std::cout << "~Helix()" << std::endl;*/
 }
 
 }  // namespace curve
