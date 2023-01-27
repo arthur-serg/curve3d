@@ -2,6 +2,7 @@
 //
 
 #include "Curves3D.hpp"
+#include <algorithm>
 #include <cmath>
 #include "Circle.hpp"
 #include "Curve.hpp"
@@ -11,36 +12,12 @@
 double pi = std::acos(-1);
 int main() {
   double t = pi / 4.0;
-  double circleRadius = 1;
-  double a = 2.0;
-  double b = 4.0;
-  auto circle = curve::Circle(circleRadius);
-  circle.getValue(t).print();
-  circle.getDerivative(t).print();
 
-  auto ellipse = curve::Ellipse(a, b);
-  ellipse.getValue(t).print();
-  ellipse.getDerivative(t).print();
+  std::cout << "Generate vector of random curves: \n";
+  curve::VectorGenerator vec(15);
+  vec.printValues(t);
 
-  auto helix = curve::Helix(a, b);
-  helix.getValue(t).print();
-  helix.getValue(t + 2 * pi).print();
+  std::vector<std::shared_ptr<curve::Circle>> circles;
 
-  helix.getDerivative(t).print();
-  helix.getDerivative(t + 2 * pi).print();
-  curve::VectorGenerator vec(20);
-  std::cout << "random generated curves: " << std::endl;
-
-  auto randomCircle = curve::Circle();
-  randomCircle.getValue(t).print();
-  randomCircle.getDerivative(t).print();
-
-  auto randomEllipse = curve::Ellipse();
-  randomEllipse.getValue(t).print();
-  randomEllipse.getDerivative(t).print();
-
-  auto randomHelix = curve::Helix();
-  randomHelix.getValue(t).print();
-  randomHelix.getDerivative(t).print();
   return 0;
 }
