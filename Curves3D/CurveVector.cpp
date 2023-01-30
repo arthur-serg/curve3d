@@ -1,10 +1,10 @@
-#include "VectorGenerator.hpp"
+#include "CurveVector.hpp"
 #include <random>
 
 namespace curve {
-
-VectorGenerator::VectorGenerator(const int& size) {
-  for (int i = 0; i < size; ++i) {
+typedef std::shared_ptr<Curve> CurvePtr;
+CurveVector::CurveVector(const int& size) {
+  for (size_t i = 0; i != size; ++i) {
     int trigger = RandomDouble(3).getValue();
     switch (trigger) {
       case 0:
@@ -19,7 +19,7 @@ VectorGenerator::VectorGenerator(const int& size) {
     }
   }
 }
-void VectorGenerator::printValues(const double& t) {
+void CurveVector::printValues(const double& t) {
   if (!data.empty()) {
     for (const auto& element : data) {
       std::cout << element.get()->getName() << " at t=" << t << std::endl;
@@ -27,12 +27,27 @@ void VectorGenerator::printValues(const double& t) {
     }
   }
 }
-void VectorGenerator::printDerivatives(const double& t) {
+void CurveVector::printDerivatives(const double& t) {
   if (!data.empty()) {
     for (const auto& element : data) {
       std::cout << element.get()->getName() << " at t=" << t << std::endl;
       element.get()->getDerivative(t).print();
     }
   }
+}
+std::vector<CurvePtr> CurveVector::getCircles() {
+  if (!data.empty()) {
+    for (auto it = data.begin(); it != data.end(); ++it) {
+      if (isCircle(**it)) {
+        circles.push_back(*it);
+      }
+    }
+  }
+
+  return circles;
+}
+
+bool CurveVector::isCircle(const curve::Curve& curve) {
+  return dynamic_cast<const curve::Circle*>(&curve);
 }
 }  // namespace curve
