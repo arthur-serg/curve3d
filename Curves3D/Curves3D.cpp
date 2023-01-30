@@ -16,6 +16,11 @@ int main() {
   std::cout << "Generate vector of random curves: \n";
   curve::VectorGenerator vec(15);
   vec.printValues(t);
+  std::sort(circles.begin(), circles.end(),
+            [](const std::shared_ptr<curve::Curve>& c1,
+               const std::shared_ptr<curve::Curve>& c2) -> bool {
+              return c1->getRadius() < c2->getRadius();
+            });
 
   std::vector<std::shared_ptr<curve::Circle>> circles;
 
