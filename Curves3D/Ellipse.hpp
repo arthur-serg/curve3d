@@ -13,6 +13,7 @@ class Ellipse : public Curve {
   std::string getName() const noexcept override;
   Point getValue(const double& t) const noexcept override;
   Point getDerivative(const double& t) const noexcept override;
+  double getRadius() const noexcept override { return 0; }
   virtual ~Ellipse() noexcept;
 
  private:
