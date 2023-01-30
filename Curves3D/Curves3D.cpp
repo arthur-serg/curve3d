@@ -1,15 +1,15 @@
 ﻿// Curves3D.cpp : Defines the entry point for the application.
 //
 
-#include "Curves3D.hpp"
+#include "include/Curves3D.hpp"
 #include <algorithm>
 #include <cmath>
 #include <numeric>
-#include "Circle.hpp"
-#include "Curve.hpp"
-#include "CurveVector.hpp"
-#include "Ellipse.hpp"
-#include "Helix.hpp"
+#include "include/Circle.hpp"
+#include "include/Curve.hpp"
+#include "include/CurveVector.hpp"
+#include "include/Ellipse.hpp"
+#include "include/Helix.hpp"
 double pi = std::acos(-1);
 
 int main() {

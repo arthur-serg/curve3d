@@ -1,4 +1,4 @@
-#include "Randomizer.hpp"
+#include "include/Randomizer.hpp"
 namespace curve {
 
 curve::RandomDouble::RandomDouble(const double& distributionUpperBound) {

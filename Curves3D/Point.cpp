@@ -1,4 +1,4 @@
-#include "Point.hpp"
+#include "include/Point.hpp"
 #include <iostream>
 namespace curve {
 

@@ -1,6 +1,6 @@
 #pragma once
 #include <math.h>
-#include "Curve.hpp"
+#include "include/Curve.hpp"
 namespace curve {
 
 class Ellipse : public Curve {

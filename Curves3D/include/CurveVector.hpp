@@ -1,9 +1,9 @@
 #pragma once
 #include <vector>
-#include "Circle.hpp"
-#include "Curve.hpp"
-#include "Ellipse.hpp"
-#include "Helix.hpp"
+#include "include/Circle.hpp"
+#include "include/Curve.hpp"
+#include "include/Ellipse.hpp"
+#include "include/Helix.hpp"
 namespace curve {
 class CurveVector {
   typedef std::shared_ptr<Curve> CurvePtr;

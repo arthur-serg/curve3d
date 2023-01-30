@@ -1,4 +1,4 @@
-#include "Ellipse.hpp"
+#include "include/Ellipse.hpp"
 
 namespace curve {
 

@@ -1,4 +1,4 @@
-#include "CurveVector.hpp"
+#include "include/CurveVector.hpp"
 #include <random>
 
 namespace curve {
