@@ -23,6 +23,12 @@ int main() {
             });
 
   std::vector<std::shared_ptr<curve::Circle>> circles;
+  double totalRadii =
+      std::accumulate(circles.begin(), circles.end(), 0.0,
+                      [](double totalRad,
+                         const std::shared_ptr<curve::Curve>& curve) -> double {
+                        return totalRad + curve.get()->getRadius();
+                      });
 
   return 0;
 }
